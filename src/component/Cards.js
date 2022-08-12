@@ -212,7 +212,8 @@ useMemo(()=>{
   },[optionValue])
   
   return (
-    <div className='grid sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-3 md:grid-rows-3 gap-x-8 gap-y-4  mt-5 mb-[10%] place-items-center'>
+    <>
+    <div className='grid sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-3 md:grid-rows-3 gap-x-8 gap-y-4  mt-5 mb-[20%] place-items-center'>
         {
        searchData? searchData.map((val)=>(
        <>
@@ -238,7 +239,7 @@ useMemo(()=>{
        )): 
        mapData.map((val)=>(
         <>
-        <div className="max-w-xs rounded overflow-hidden shadow-lg cursor-pointer">
+        <div className="max-w-xs rounded overflow-hidden shadow-lg cursor-pointer ">
    <img className="w-full  " src={val.photo} alt="Sunset in the mountains "/>
    <div className="px-6 py-2">
      <div className="font-semibold text-gray-700 text-lg ">{val.title}</div>
@@ -259,8 +260,10 @@ useMemo(()=>{
         </>
         ))
         }
-       
     </div>
+    <div className='h-10 bg-black w-10'></div>
+   
+    </>
   )
 }
 
